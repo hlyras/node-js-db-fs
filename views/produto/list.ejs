@@ -1,0 +1,87 @@
+<!-- views/pages/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+
+    <script>
+      function del(id) {
+        if (!id || id <= 0) {
+          return;
+        }
+        if (confirm('Deseja realmente excluir?')) {
+          window.location = '/cliente/'+id+'/remove';
+        }
+      }
+    </script>
+  </head>
+  <body class="container">
+
+    <% include ../partials/header %>
+  <header>
+    <!-- views/partials/header.ejs -->
+    <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a href="/produto" class="navbar-brand" href="#">
+                <span class=" glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <form action="/produto/filtrar" method="post">
+              <select name="produtoTipo" class="selectHeader">
+                <option value='0'>PRODUTO</option>
+                <option value='colete'>COLETE</option>
+                <option value='coldre'>COLDRE</option>
+                <option value='bornal'>BORNAL</option>
+              </select>
+
+              <select name="produtoCor" class="selectHeader">
+                <option value='0'>COR</option>
+                <option value='preto'>PRETO</option>
+                <option value='verde'>VERDE</option>
+                <option value='tan'>TAN</option>
+                <option value='camufladoPM'>CAMO PM</option>
+                <option value='camufladoVD'>CAMO VD</option>
+              </select>
+            <input type="submit" value="Buscar" class="selectHeader"></input>
+            </form>
+        </div>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="row">
+      <div id="containner" class="col-sm-12">    
+        <div class="jumbotron">
+          <table class="table table-hover">
+            <tr>
+              <td>Cód</td>
+              <td>Produto</td>
+              <td>cor</td>
+              <td>quantidade</td>
+            </tr>
+          <%
+            for (var index in produtos) {%>
+              <tr>
+                <td><%=produtos[index].id%></td>
+                <td><%=produtos[index].nome%></td>
+                <td><%=produtos[index].cor%></td>
+                <td><%=produtos[index].quantidade%></td>
+                <!-- <td><a href="/cliente/<%=produtos[index].id%>/edit">editar</a></td> -->
+                <!-- <td><a href="javascript:void(0)" onclick="del(<%=produtos[index].id%>)">excluir</td> -->
+              </tr> 
+            <%}%>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <% include ../partials/footer %>
+
+  </footer>
+
+  </body>
+</html>

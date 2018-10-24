@@ -1,0 +1,51 @@
+<!-- views/pages/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+    <main>
+    <div class="row">
+      <div id="containner" class="col-sm-12">    
+        <div class="jumbotron">
+          <form id="formCad" action="/produto/update" method="post">
+          <fieldset>
+            <legend>Cadastro</legend>
+            <input name="id" type="hidden" placeholder="Nome do produto" maxlength="45" value="<%= produto.id %>" required /><br>
+            <input name="nome" type="text" placeholder="Nome do produto" maxlength="45" value="<%= produto.nome %>" required /><br>
+
+            <input name="cor" type="text" placeholder="cor do produto" maxlength="11" value="<%= produto.cor %>" required /><br>
+            
+            <!-- <select name="genero">
+              <option value="0">Gênero</option>
+              <option value="M">Masculino</option>
+              <option value="F">Feminino</option>
+            </select> -->
+            <input type="submit" value="Enviar">
+          </fieldset>
+        </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <main>
+    
+  </main>
+
+  <footer>
+  <% include ../partials/footer %>
+  </footer>
+
+  </body>
+</html>
+
+
+
