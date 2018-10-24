@@ -2,7 +2,6 @@ var express = require('express');
 var app = express();
 var logger = require('morgan');
 var routes = require('./app/routes/index');
-require('newrelic');
 
 app.set('port', (process.env.PORT || 3000));
 
@@ -12,11 +11,6 @@ app.set('views', __dirname + '/app/views');
 app.set('view engine', 'ejs');
 
 app.use(function(req, res, next) {
-  if(req.headers.host == "didox.com.br"){
-    res.redirect("http://www.didox.com.br");
-    return;
-  }
-
   res.header('Vary', 'X-Device, Origin');
   res.setHeader('Cache-Control', 'max-age=3600, public, no-transform');
   next();
@@ -52,5 +46,3 @@ app.use(function(err, req, res, next) {
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
-
-

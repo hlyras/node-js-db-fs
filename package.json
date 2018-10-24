@@ -1,7 +1,7 @@
 {
-  "name": "didox",
+  "name": "lyra-wi",
   "version": "0.0.1",
-  "description": "Didox Business & Technology",
+  "description": "Wi-cooperation",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -10,7 +10,6 @@
     "ejs": "2.3.3",
     "express": "4.13.3",
     "morgan": "1.2.3",
-    "newrelic": "*",
     "mysql": "*"
   },
   "engines": {
