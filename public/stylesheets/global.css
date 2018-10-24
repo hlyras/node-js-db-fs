@@ -1,0 +1,113 @@
+/*###############################################################################
+            RESET
+###############################################################################*/
+
+html, body, div, span, applet, object, iframe, table, caption,
+tbody, tfoot, thead, tr, th, td, del, dfn, em, font, img, ins,
+kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+acronym, address, big, cite, code, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, button {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#clientes img{
+  margin-bottom: 10px;
+}
+
+.share{
+  margin-bottom: 30px;
+}
+
+.solucoes{
+  margin-left: 50px;
+}
+
+.center {
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+}
+
+img.logo{
+  width:40px;
+  border-radius: 6px;
+  border:1px solid #9c9c9c;
+  margin-top: -8px;
+}
+
+.glyphicon-chevron-left:before {
+    content: "<";
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.glyphicon-chevron-right:before {
+    content: ">";
+    font-weight: bold;
+    font-size: 25px;
+}
+
+@media (min-width: 1200px){
+  .col-lg-4 {
+    width: 23.333333%!important;
+  }
+}
+
+.topo-back{
+  position: absolute;
+  margin-top: -42px;
+  margin-left: 17px;
+}
+
+.nolink{
+  color:#5a5a5a!important;
+  text-indent: none;
+}
+
+.nolink a:link {
+  color:#5a5a5a!important;
+  text-indent: none;
+}
+
+.nolink a:visited {
+  color:#5a5a5a!important;
+  text-indent: none;
+}
+.nolink a:hover {
+  color:#5a5a5a!important;
+  text-indent: none;
+}
+.nolink a:active {
+  color:#5a5a5a!important;
+  text-indent: none;
+}
+
+#myCarousel #sonho{ content:url("/imagens/sonho4.jpg"); }
+#myCarousel #solucoes{ content:url("/imagens/solucao4.jpg"); }
+
+@media (min-width: 500px) {
+  #myCarousel #sonho{ content:url("/imagens/sonho5.jpg"); }
+  #myCarousel #solucoes{ content:url("/imagens/solucao5.jpg"); }
+}
+
+@media (min-width: 768px) {
+  #myCarousel #sonho{ content:url("/imagens/sonho3.jpg"); }
+  #myCarousel #solucoes{ content:url("/imagens/solucao3.jpg"); }
+}
+@media (min-width: 992px) {
+  #myCarousel #sonho{ content:url("/imagens/sonho3.jpg"); }
+  #myCarousel #solucoes{ content:url("/imagens/solucao3.jpg"); }
+}
+@media (min-width: 1200px) {
+  #myCarousel #sonho{ content:url("/imagens/sonho.jpg"); }
+  #myCarousel #solucoes{ content:url("/imagens/solucao.jpg"); }
+}
