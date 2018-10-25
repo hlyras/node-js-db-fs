@@ -24,11 +24,28 @@ var teste = [
 
 
 
-var dado = null;
-for(i=0;i<teste.length;i++){
-   if(teste[i].nome.toLowerCase().substring(teste[i].nome.length - 1, teste[i].nome.length) == "o"){
-      dado = teste[i];
+// var dado = [];
+// for(i=0;i<teste.length;i++){
+//    if(teste[i].nome.toLowerCase().substring(teste[i].nome.length - 1, teste[i].nome.length) == "a"){
+//       console.log(teste[i].nome.toLowerCase().substring(teste[i].nome.length - 1, teste[i].nome.length));
+//       dado.push(teste[i]);
+//    }
+// }
+
+var filtro = "an";
+var tabela = teste;
+var dados = [];
+function filtrar(){
+   var nomeFiltro = filtro;
+   for(var i in tabela){
+      var conteudo = tabela[i].nome;
+      var corresponde = conteudo.toLowerCase().indexOf(nomeFiltro) >= 0;
+      // console.log(corresponde);
+      if(corresponde){
+         dados.push(tabela[i]);
+      }
    }
 }
-
-console.log(dado);
+filtrar();
+console.log(dados);
+// console.log(dado);

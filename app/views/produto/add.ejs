@@ -1,0 +1,29 @@
+<!-- views/pages/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <main>
+    <div class="row">
+      <div id="containner" class="col-sm-12">    
+        <div class="jumbotron">
+          <form action="/produto/create" method="post">
+            <input type="text" name="name" placeholder="Digite o nome">
+            <input type="text" name="color" placeholder="Digite a cor">
+            <input type="number" name="quantity" placeholder="Digite a quantidade">
+            <button type="submit">Criar</button>
+          </form>
+        </div>
+    </div>
+  </main>
+  <footer>
+  <% include ../partials/footer %>
+  </footer>
+  </body>
+</html>

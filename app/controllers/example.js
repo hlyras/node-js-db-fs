@@ -1,4 +1,4 @@
-var Pessoa = require('../models/pessoa');
+var Pessoa = require('../models/pessoaBancoArquivo');
 
 var homeController = {
   index: function(request, response, next) {

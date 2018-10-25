@@ -13,7 +13,9 @@ db.cnn.exec = function(query, callback) {
 
 
 var App = {
-	BANCO_ARQUIVO: "dados/bancoArquivo.js",
+	pedido_db: "dados/pedido.js",
+	produto_db: "dados/produto.js",
+	cliente_db: "dados/cliente.js",
 	db: db
 }
 
