@@ -11,12 +11,14 @@ var Produto = function(){
 	}
 };
 
-Produto.saveAll = function(produtos){
+Produto.saveAll = function(produtos, callback){
   var fs = require('fs');
-  console.log(App.produto_db);
   fs.writeFile(App.produto_db, JSON.stringify(produtos), function(err) {
     if(err) {
       console.log(err);
+    } else {
+    	console.log('file written');
+    	callback(produtos);
     }
   });
 }
@@ -33,13 +35,14 @@ Produto.save = function(produto, callback){
 				quantity: parseInt(produto.quantity)
 			}
 			dados.push(hash);
-			Produto.saveAll(dados);
+			Produto.saveAll(dados, function(){
+				callback();
+			});
 	  } else {
 	  	var produtos = [];
 	  	for(var i in dados){
 	  		produtos.push(dados[i]);
 	  	};
-	  	console.log(dados.length);
 			var hash = {
 				id: dados.length,
 				name: produto.name,
@@ -47,8 +50,9 @@ Produto.save = function(produto, callback){
 				quantity: parseInt(produto.quantity)
 			}
 			produtos.push(hash)
-			Produto.saveAll(produtos);
-			callback(produtos);
+			Produto.saveAll(produtos, function(){
+				callback();
+			});
 	  }
   });
 }

@@ -1,42 +1,48 @@
-<!-- views/pages/home.ejs -->
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
   <head>
-    <% include ../partials/head %>
-
-    <script>
-      function del(id) {
-        if (!id || id <= 0) {
-          return;
-        }
-        if (confirm('Deseja realmente excluir?')) {
-          window.location = '/cliente/'+id+'/remove';
-        }
-      }
-    </script>
+      <% include ../partials/head %>
   </head>
-  <body class="container">
+  <body>
 
-    <% include ../partials/header %>
-  <header>
-    <!-- views/partials/header.ejs -->
-    <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
+  <!-- Header -->
+    <header id="header" class="alt">
+      <% include ../partials/header %>
+    </header>
 
-        <div class="navbar-header">
-            <a href="/produto" class="navbar-brand" href="#">
+  <!-- Nav -->
+    <nav id="menu">
+      <ul class='links'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/produto'>Produtos</a></li>
+      </ul>
+    </nav>
+
+  <!-- Banner -->
+    <section id="One" class="wrapper style3">
+      <div class="inner">
+        <header class="align-center">
+          
+        </header>
+      </div>
+    </section>
+
+  <!-- One -->
+    <section id="two" class="wrapper style2">
+      <div class="inner">
+
+          <a href="/produto" class="navbar-brand" href="#">
                 <span class=" glyphicon glyphicon-chevron-left"></span>
             </a>
             <form action="/produto/filtrar" method="post">
-              <select name="produtoTipo" class="selectHeader">
+              <select name="produtoTipo" class="button fit small">
                 <option value='0'>PRODUTO</option>
                 <option value='colete'>COLETE</option>
                 <option value='coldre'>COLDRE</option>
                 <option value='bornal'>BORNAL</option>
               </select>
 
-              <select name="produtoCor" class="selectHeader">
+              <select name="produtoCor" class="button fit small">
                 <option value='0'>COR</option>
                 <option value='preto'>PRETO</option>
                 <option value='verde'>VERDE</option>
@@ -44,17 +50,8 @@
                 <option value='camufladoPM'>CAMO PM</option>
                 <option value='camufladoVD'>CAMO VD</option>
               </select>
-            <input type="submit" value="Buscar" class="selectHeader"></input>
+            <input type="submit" value="Buscar" class="button fit small"></input>
             </form>
-        </div>
-    </div>
-    </nav>
-  </header>
-
-  <main>
-    <div class="row">
-      <div id="containner" class="col-sm-12">    
-        <div class="jumbotron">
           <table class="table table-hover">
             <tr>
               <td>Cód</td>
@@ -73,15 +70,15 @@
                 <!-- <td><a href="javascript:void(0)" onclick="del(<%=produtos[index].id%>)">excluir</td> -->
               </tr> 
             <%}%>
-          </table>
-        </div>
+          </table>  
+
+
       </div>
-    </div>
-  </main>
-  <footer>
-    <% include ../partials/footer %>
-
-  </footer>
-
+    </section>
+  <!-- Footer -->
+    <footer id="footer">
+      <% include ../partials/footer %>
+    </footer>
   </body>
 </html>
+            

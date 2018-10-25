@@ -1,39 +1,46 @@
-<!-- views/pages/home.ejs -->
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
   <head>
-    <% include ../partials/head %>
+      <% include ../partials/head %>
   </head>
-  <body class="container">
+  <body>
 
-  <header>
-    <% include ../partials/header %>
-  </header>
+  <!-- Header -->
+    <header id="header" class="alt">
+      <% include ../partials/header %>
+    </header>
 
-  <main>
-    <div class="row">
-      <div id="containner" class="col-sm-12">    
-        <div class="jumbotron">
-          <span class="input-group-addon"><a class="btnMenu" href="/produto/list" role="button">Estoque</a></span>  
-        </div>
+  <!-- Nav -->
+    <nav id="menu">
+      <ul class='links'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/produto'>Produtos</a></li>
+      </ul>
+    </nav>
+
+  <!-- Banner -->
+    <section id="One" class="wrapper style3">
+      <div class="inner">
+        <header class="align-center">
+          
+        </header>
       </div>
-      <div id="containner" class="col-sm-12">    
-        <div class="jumbotron">
-          <span class="input-group-addon"><a class="btnMenu" href="/produto/add" role="button">Entrada</a></span>  
-        </div>
-      </div>
-      <div id="containner" class="col-sm-12">    
-        <div class="jumbotron">
-          <span class="input-group-addon"><a class="btnMenu" href="/produto/saida" role="button">Saída</a></span>  
-        </div>
-      </div>
-    </div>
-  </main>
+    </section>
 
-  <footer>
-  <% include ../partials/footer %>
-  </footer>
+  <!-- One -->
+    <section id="two" class="wrapper style2">
+      <div class="inner">
 
+          <span><a class="button fit small" href="/produto/list" role="button">Estoque</a></span>  
+          <span><a class="button fit small" href="/produto/add" role="button">Entrada</a></span>  
+          <span><a class="button fit small" href="/produto/saida" role="button">Saída</a></span>  
+
+
+      </div>
+    </section>
+  <!-- Footer -->
+    <footer id="footer">
+      <% include ../partials/footer %>
+    </footer>
   </body>
 </html>

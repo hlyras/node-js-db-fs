@@ -15,12 +15,11 @@ var produtoController = {
 		'use strict'
 
 		var produto = new Produto();
-		console.log(req.body.name);
 		produto.name = req.body.name;
 		produto.color = req.body.color;
 		produto.quantity = req.body.quantity;
-		produto.save(function(row){
-    	res.redirect("/produto");
+		produto.save(function(){
+    		res.redirect("/produto/add");
 		});
 	},
 	list:function(req,res){

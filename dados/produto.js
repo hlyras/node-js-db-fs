@@ -1,1 +1,1 @@
-[{"id":0,"name":"Henrique Lyra","color":"preto","quantity":3},{"id":1,"name":"Éric Lyra","color":"branco","quantity":5},{"id":2,"name":"produto 3","color":"bege","quantity":10},{"id":3,"name":"jony","color":"branco","quantity":13}]
+[{"id":0,"name":"Henrique Lyra","color":"branco","quantity":4},{"id":1,"name":"random","color":"Camo","quantity":123}]
